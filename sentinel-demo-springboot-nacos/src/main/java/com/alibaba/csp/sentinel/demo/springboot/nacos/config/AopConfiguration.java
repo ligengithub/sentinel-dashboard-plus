@@ -23,6 +23,7 @@ import org.springframework.context.annotation.Configuration;
 @Configuration
 public class AopConfiguration {
 
+    // spring-colud-alibaba-sentinel 引入sentinel 不需要手动注入下面Bean 可以直接使用@SentinelResource
 
 //    @Bean
 //    public SentinelResourceAspect sentinelResourceAspect() {

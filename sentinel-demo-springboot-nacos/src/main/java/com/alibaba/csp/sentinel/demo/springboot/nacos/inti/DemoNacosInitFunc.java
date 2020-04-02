@@ -1,8 +1,8 @@
-package com.alibaba.csp.sentinel.demo.springboot.nacos.config;
+package com.alibaba.csp.sentinel.demo.springboot.nacos.inti;
 
+import com.alibaba.csp.sentinel.demo.springboot.nacos.config.NacosStartService;
+import com.alibaba.csp.sentinel.init.InitFunc;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.ApplicationArguments;
-import org.springframework.boot.ApplicationRunner;
 import org.springframework.stereotype.Component;
 
 /**
@@ -10,13 +10,13 @@ import org.springframework.stereotype.Component;
  * createTime 2018-11-07 22:37
  **/
 @Component
-public class ApplicationRunnerImpl implements ApplicationRunner {
+public class DemoNacosInitFunc implements InitFunc {
 
     @Autowired
     private NacosStartService nacosStartService;
 
     @Override
-    public void run(ApplicationArguments args) throws Exception {
+    public void init() throws Exception {
         nacosStartService.initNacosConfigFromNacos();
     }
 }
