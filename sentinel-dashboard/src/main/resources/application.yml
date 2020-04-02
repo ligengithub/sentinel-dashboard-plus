@@ -1,0 +1,45 @@
+spring:
+  application:
+    name: sentinel-dashboard-plus
+  data:
+    mongodb:
+      port: 27017
+      database: db1
+      uri: mongodb://lg:123456@118.25.153.63
+      authentication-database: admin
+  http:
+    encoding:
+      charset: utf-8
+      force: true
+      enabled: true
+
+sentinel:
+  dashboard:
+    version: ${project.version}
+
+auth:
+  enabled: false
+  filter:
+    exclude-urls: /,/auth/login,/auth/logout,/registry/machine,/version,/test
+    exclude-url-suffixes: htm,html,js,css,map,ico,ttf,woff,png
+#  password: sentinel
+#  username: sentinel
+#logging:
+#  file: ${user.home}/logs/csp/sentinel-dashboard.log
+#  pattern:
+#    file: "%d{yyyy-MM-dd HH:mm:ss} [%thread] %-5level %logger{36} - %msg%n"
+#  level:
+#    springframework:
+#      web: INFO
+
+nacos:
+  degradeDataIdPrefix: degrade-rules
+  serverAddr: 10.16.10.139
+  groupId: DEFAULT_GROUP
+  flowDataIdPrefix: flow-rules
+  namespace: 31b168cb-51ee-4b8b-adfa-29b42d4afa0b
+  paramFlowDataIdPrefix: param-rules
+
+
+
+
