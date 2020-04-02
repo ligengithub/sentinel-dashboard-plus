@@ -3,3 +3,5 @@
 target\
 target\
 sentinel-dashboard-plus.iml
+application-dev.yml
+application-dev.properties
