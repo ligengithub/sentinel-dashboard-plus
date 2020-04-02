@@ -13,7 +13,7 @@ import com.alibaba.fastjson.JSON;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
+import org.springframework.context.annotation.Configuration;
 
 import java.util.List;
 import java.util.Objects;
@@ -26,11 +26,10 @@ import java.util.Properties;
  * @description:
  * @date 2020/4/214:08
  */
-@Service
+@Configuration
 public class NacosStartService {
 
     Logger logger = LoggerFactory.getLogger(this.getClass());
-
 
     @Autowired
     private SentinelProperties sentinelProperties;

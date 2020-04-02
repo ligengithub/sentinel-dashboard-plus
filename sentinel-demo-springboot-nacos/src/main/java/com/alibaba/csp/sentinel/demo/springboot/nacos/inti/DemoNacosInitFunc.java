@@ -12,8 +12,12 @@ import org.springframework.stereotype.Component;
 @Component
 public class DemoNacosInitFunc implements InitFunc {
 
+    /*
+     * 因为sentinel是SPI拓展接口不能使用，spring的ioc，所以下面的注入会报NPE。。。。
+     * */
     @Autowired
-    private NacosStartService nacosStartService;
+    NacosStartService nacosStartService;
+
 
     @Override
     public void init() throws Exception {

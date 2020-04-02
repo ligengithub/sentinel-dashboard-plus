@@ -15,12 +15,10 @@
  */
 package com.alibaba.csp.sentinel.demo.springboot.nacos.controller;
 
-import com.alibaba.cloud.sentinel.SentinelProperties;
 import com.alibaba.csp.sentinel.annotation.SentinelResource;
 import com.alibaba.csp.sentinel.util.StringUtil;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.annotation.Order;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -33,10 +31,6 @@ import org.springframework.web.bind.annotation.RestController;
 public class DemoController {
 
     Logger logger = LoggerFactory.getLogger(DemoController.class);
-
-
-    @Autowired
-    private SentinelProperties sentinelProperties;
 
 
     @Order(1)

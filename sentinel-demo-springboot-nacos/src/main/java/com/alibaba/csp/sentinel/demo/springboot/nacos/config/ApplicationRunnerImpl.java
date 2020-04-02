@@ -15,8 +15,9 @@ public class ApplicationRunnerImpl implements ApplicationRunner {
     @Autowired
     private NacosStartService nacosStartService;
 
+
     @Override
     public void run(ApplicationArguments args) throws Exception {
-        nacosStartService.initNacosConfigFromNacos();
+//        nacosStartService.initNacosConfigFromNacos();
     }
 }
