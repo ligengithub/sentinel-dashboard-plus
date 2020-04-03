@@ -188,10 +188,10 @@ public class FlowControllerV2 {
         entity.setGmtCreate(oldEntity.getGmtCreate());
         entity.setGmtModified(date);
         try {
-            entity = repository.save(entity);
-            if (entity == null) {
-                return Result.ofFail(-1, "save entity fail");
-            }
+//            entity = repository.save(entity);
+//            if (entity == null) {
+//                return Result.ofFail(-1, "save entity fail");
+//            }
             publishRules(oldEntity.getApp());
         } catch (Throwable throwable) {
             logger.error("Failed to update flow rule", throwable);

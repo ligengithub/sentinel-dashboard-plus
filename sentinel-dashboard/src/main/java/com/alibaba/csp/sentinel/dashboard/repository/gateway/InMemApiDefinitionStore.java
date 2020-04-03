@@ -36,4 +36,14 @@ public class InMemApiDefinitionStore extends InMemoryRuleRepositoryAdapter<ApiDe
     protected long nextId() {
         return ids.incrementAndGet();
     }
+
+    @Override
+    protected void clearId() {
+        ids.set(0);
+    }
+
+    @Override
+    protected void setId(long id) {
+        ids.set(id);
+    }
 }
