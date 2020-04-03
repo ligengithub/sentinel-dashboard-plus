@@ -39,19 +39,35 @@ public abstract class InMemoryRuleRepositoryAdapter<T extends RuleEntity> implem
 
     private static final int MAX_RULES_SIZE = 10000;
 
+    private static long MAX_ID = 0l;
+
+
     @Override
     public T save(T entity) {
         if (entity.getId() == null) {
-            entity.setId(nextId());
+            long nextId = nextId();
+            if (nextId <= MAX_ID) {
+                setId(MAX_ID);
+                entity.setId(nextId());
+            } else {
+                entity.setId(nextId);
+            }
+        } else {
+            nextId();
+            MAX_ID = entity.getId();
         }
         T processedEntity = preProcess(entity);
         if (processedEntity != null) {
             allRules.put(processedEntity.getId(), processedEntity);
             machineRules.computeIfAbsent(MachineInfo.of(processedEntity.getApp(), processedEntity.getIp(),
-                processedEntity.getPort()), e -> new ConcurrentHashMap<>(32))
-                .put(processedEntity.getId(), processedEntity);
-            appRules.computeIfAbsent(processedEntity.getApp(), v -> new ConcurrentHashMap<>(32))
-                .put(processedEntity.getId(), processedEntity);
+                    processedEntity.getPort()), e -> {
+                return new ConcurrentHashMap<>(32);
+            })
+                    .put(processedEntity.getId(), processedEntity);
+            appRules.computeIfAbsent(processedEntity.getApp(), v -> {
+                return new ConcurrentHashMap<>(32);
+            })
+                    .put(processedEntity.getId(), processedEntity);
         }
 
         return processedEntity;
@@ -60,6 +76,7 @@ public abstract class InMemoryRuleRepositoryAdapter<T extends RuleEntity> implem
     @Override
     public List<T> saveAll(List<T> rules) {
         // TODO: check here.
+        clearId();
         allRules.clear();
         machineRules.clear();
         appRules.clear();
@@ -111,6 +128,7 @@ public abstract class InMemoryRuleRepositoryAdapter<T extends RuleEntity> implem
     }
 
     public void clearAll() {
+        clearId();
         allRules.clear();
         machineRules.clear();
         appRules.clear();
@@ -126,4 +144,23 @@ public abstract class InMemoryRuleRepositoryAdapter<T extends RuleEntity> implem
      * @return next unused id
      */
     abstract protected long nextId();
+
+    /**
+     * @ desc : clearId
+     * @ params
+     * @ return
+     * @ date 2020/4/3
+     * @ author ligen
+     */
+    abstract protected void clearId();
+
+    /**
+     * @ desc : setId
+     * @ params
+     * @ return
+     * @ date 2020/4/3
+     * @ author ligen
+     */
+    abstract protected void setId(long id);
+
 }
