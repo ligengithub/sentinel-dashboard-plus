@@ -5,8 +5,30 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.demo.sentinel</groupId>
-    <artifactId>dashboard-plus</artifactId>
+    <artifactId>sentinel-dashboard-plus</artifactId>
     <version>1.0-SNAPSHOT</version>
 
+    <modules>
+        <module>sentinel-dashboard</module>
+        <module>sentinel-demo-springboot-nacos</module>
+        <module>sentinel-demo-springboot-cluster</module>
+        <module>Test</module>
+<!--        <module></module>-->
+    </modules>
+
+
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <configuration>
+                    <source>1.8</source>
+                    <target>1.8</target>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
 
 </project>

@@ -52,8 +52,8 @@ public class MetricController {
     private static final long maxQueryIntervalMs = 1000 * 60 * 60;
 
     @Autowired
-//    @Qualifier("inMemoryMetricsRepository")
-    @Qualifier("mongoMetricsRepository")
+    @Qualifier("inMemoryMetricsRepository")
+//    @Qualifier("mongoMetricsRepository")
     private MetricsRepository<MetricEntity> metricStore;
 
     @ResponseBody

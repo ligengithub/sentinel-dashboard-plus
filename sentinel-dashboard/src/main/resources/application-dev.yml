@@ -1,12 +1,12 @@
 spring:
   application:
     name: sentinel-dashboard-plus
-#  data:
-#    mongodb:
-#      port: 27017
-#      database: db1
-#      uri: mongodb://lg:123456@xx.xx.xx.xx
-#      authentication-database: admin
+  data:
+    mongodb:
+      port: 27017
+      database: db1
+      uri: mongodb://lg:123456@118.25.153.63
+      authentication-database: admin
   http:
     encoding:
       charset: utf-8
@@ -32,13 +32,13 @@ auth:
 #    springframework:
 #      web: INFO
 
-#nacos:
-#  degradeDataIdPrefix: degrade-rules
-#  serverAddr: xx.xx.xx.xx
-#  groupId: DEFAULT_GROUP
-#  flowDataIdPrefix: flow-rules
-#  namespace: 31b168cb-51ee-4b8b-adfa-29b42d4afa0b
-#  paramFlowDataIdPrefix: param-rules
+nacos:
+  degradeDataIdPrefix: degrade-rules
+  serverAddr: 10.16.10.139
+  groupId: DEFAULT_GROUP
+  flowDataIdPrefix: flow-rules
+  namespace: 31b168cb-51ee-4b8b-adfa-29b42d4afa0b
+  paramFlowDataIdPrefix: param-rules
 
 
 

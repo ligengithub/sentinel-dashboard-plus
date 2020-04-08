@@ -82,8 +82,8 @@ public class MetricFetcher {
     private Map<String, AtomicLong> appLastFetchTime = new ConcurrentHashMap<>();
 
     @Autowired
-    @Qualifier("mongoMetricsRepository")
 //    @Qualifier("mongoMetricsRepository")
+    @Qualifier("mongoMetricsRepository")
     private MetricsRepository<MetricEntity> metricStore;
     @Autowired
     private AppManagement appManagement;
