@@ -23,9 +23,9 @@ import java.util.Date;
 /**
  * @author leyou
  */
-@Document(collection = "MetricEntity")
+//@Document(collection = "MetricEntity")
 public class MetricEntity {
-    @Field("idd")
+//    @Field("idd")
     private Long id;
     private Date gmtCreate;
     private Date gmtModified;

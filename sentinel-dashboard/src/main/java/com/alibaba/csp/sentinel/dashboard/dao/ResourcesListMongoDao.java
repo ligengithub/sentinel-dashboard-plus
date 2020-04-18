@@ -22,22 +22,24 @@ import java.util.stream.Collectors;
 @Component
 public class ResourcesListMongoDao {
 
-    @Autowired
-    private MongoTemplate mongoTemplate;
+//    @Autowired
+//    private MongoTemplate mongoTemplate;
 
     public void save(ResourceListMongo resource) {
-        mongoTemplate.save(resource);
+//        mongoTemplate.save(resource);
     }
 
     public List<ResourceListMongo> getByApp(String app) {
         Query query = new Query(Criteria.where("app").is(app));
-        return mongoTemplate.find(query, ResourceListMongo.class);
+//        return mongoTemplate.find(query, ResourceListMongo.class);
+        return null;
     }
 
     public List<String> getResourceNameListByApp(String app) {
         Query query = new Query(Criteria.where("app").is(app));
-        List<ResourceListMongo> resourceListMongos = mongoTemplate.find(query, ResourceListMongo.class);
-        return resourceListMongos.stream().map(a -> a.getResources()).collect(Collectors.toList());
+//        List<ResourceListMongo> resourceListMongos = mongoTemplate.find(query, ResourceListMongo.class);
+//        return resourceListMongos.stream().map(a -> a.getResources()).collect(Collectors.toList());
+        return null;
     }
 
 }

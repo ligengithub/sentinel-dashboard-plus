@@ -17,10 +17,10 @@
 
     <dependencies>
 
-        <dependency>
-            <groupId>com.alibaba.csp</groupId>
-            <artifactId>sentinel-core</artifactId>
-        </dependency>
+<!--        <dependency>-->
+<!--            <groupId>com.alibaba.csp</groupId>-->
+<!--            <artifactId>sentinel-core</artifactId>-->
+<!--        </dependency>-->
         <dependency>
             <groupId>com.alibaba.csp</groupId>
             <artifactId>sentinel-transport-simple-http</artifactId>
@@ -40,6 +40,70 @@
             <version>${spring.boot.version}</version>
         </dependency>
     </dependencies>
+
+<!--    <dependencies>-->
+<!--        &lt;!&ndash;nacos  config&ndash;&gt;-->
+<!--        &lt;!&ndash;<dependency>&ndash;&gt;-->
+<!--        &lt;!&ndash;<groupId>com.alibaba.cloud</groupId>&ndash;&gt;-->
+<!--        &lt;!&ndash;<artifactId>spring-cloud-starter-alibaba-nacos-config</artifactId>&ndash;&gt;-->
+<!--        &lt;!&ndash;</dependency>&ndash;&gt;-->
+
+<!--        <dependency>-->
+<!--            <groupId>com.alibaba.cloud</groupId>-->
+<!--            <artifactId>spring-cloud-starter-alibaba-sentinel</artifactId>-->
+<!--        </dependency>-->
+
+<!--        &lt;!&ndash;用nacos  和 sentinel 就用下面三个&ndash;&gt;-->
+<!--        <dependency>-->
+<!--            <groupId>com.alibaba.cloud</groupId>-->
+<!--            <artifactId>spring-cloud-starter-alibaba-nacos-discovery</artifactId>-->
+<!--        </dependency>-->
+<!--        &lt;!&ndash;做持久化用&ndash;&gt;-->
+<!--        <dependency>-->
+<!--            <groupId>com.alibaba.csp</groupId>-->
+<!--            <artifactId>sentinel-datasource-nacos</artifactId>-->
+<!--        </dependency>-->
+
+<!--        &lt;!&ndash;<dependency>&ndash;&gt;-->
+<!--        &lt;!&ndash;<groupId>org.springframework.cloud</groupId>&ndash;&gt;-->
+<!--        &lt;!&ndash;<artifactId>spring-cloud-starter-openfeign</artifactId>&ndash;&gt;-->
+<!--        &lt;!&ndash;</dependency>&ndash;&gt;-->
+
+
+<!--        &lt;!&ndash;引入自己api&ndash;&gt;-->
+<!--&lt;!&ndash;        <dependency>&ndash;&gt;-->
+<!--&lt;!&ndash;            <groupId>cn.dongfang.clouddemo</groupId>&ndash;&gt;-->
+<!--&lt;!&ndash;            <artifactId>apicommons</artifactId>&ndash;&gt;-->
+<!--&lt;!&ndash;            <version>${project.version}</version>&ndash;&gt;-->
+<!--&lt;!&ndash;        </dependency>&ndash;&gt;-->
+<!--        <dependency>-->
+<!--            <groupId>org.springframework.boot</groupId>-->
+<!--            <artifactId>spring-boot-starter-web</artifactId>-->
+<!--        </dependency>-->
+<!--        <dependency>-->
+<!--            <groupId>org.springframework.boot</groupId>-->
+<!--            <artifactId>spring-boot-starter-actuator</artifactId>-->
+<!--        </dependency>-->
+<!--        &lt;!&ndash;热部署&ndash;&gt;-->
+<!--        <dependency>-->
+<!--            <groupId>org.springframework.boot</groupId>-->
+<!--            <artifactId>spring-boot-devtools</artifactId>-->
+<!--            <scope>runtime</scope>-->
+<!--            <optional>true</optional>-->
+<!--        </dependency>-->
+
+<!--        <dependency>-->
+<!--            <groupId>org.projectlombok</groupId>-->
+<!--            <artifactId>lombok</artifactId>-->
+<!--            <optional>true</optional>-->
+<!--        </dependency>-->
+
+<!--        <dependency>-->
+<!--            <groupId>org.springframework.boot</groupId>-->
+<!--            <artifactId>spring-boot-starter-test</artifactId>-->
+<!--            <scope>test</scope>-->
+<!--        </dependency>-->
+<!--    </dependencies>-->
 
 
 

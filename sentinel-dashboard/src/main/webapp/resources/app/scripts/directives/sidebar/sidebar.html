@@ -44,13 +44,22 @@
                     <!--<a ui-sref="dashboard.flow({app: entry.app})">-->
                     <!--<i class="glyphicon glyphicon-filter"></i>&nbsp;&nbsp;流控规则 V1</a>-->
                     <!--</li>-->
-
+                    <!--          网关           -->
+                    <!--                    <li ui-sref-active="active" ng-if="entry.isGateway">-->
+                    <!--                        <a ui-sref="dashboard.gatewayApi({app: entry.app})">-->
+                    <!--                            <i class="glyphicon glyphicon-tags"></i>&nbsp;&nbsp;&nbsp;API 管理</a>-->
+                    <!--                    </li>-->
+                    <!--                    <li ui-sref-active="active" ng-if="entry.isGateway">-->
+                    <!--                        <a ui-sref="dashboard.gatewayFlow({app: entry.app})">-->
+                    <!--                            <i class="glyphicon glyphicon-filter"></i>&nbsp;&nbsp;流控规则</a>-->
+                    <!--                    </li>-->
+                    <!--             网关v2        -->
                     <li ui-sref-active="active" ng-if="entry.isGateway">
-                        <a ui-sref="dashboard.gatewayApi({app: entry.app})">
+                        <a ui-sref="dashboard.gatewayApiV2({app: entry.app})">
                             <i class="glyphicon glyphicon-tags"></i>&nbsp;&nbsp;&nbsp;API 管理</a>
                     </li>
                     <li ui-sref-active="active" ng-if="entry.isGateway">
-                        <a ui-sref="dashboard.gatewayFlow({app: entry.app})">
+                        <a ui-sref="dashboard.gatewayFlowV2({app: entry.app})">
                             <i class="glyphicon glyphicon-filter"></i>&nbsp;&nbsp;流控规则</a>
                     </li>
 

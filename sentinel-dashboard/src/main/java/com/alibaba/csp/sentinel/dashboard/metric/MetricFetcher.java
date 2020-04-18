@@ -83,7 +83,7 @@ public class MetricFetcher {
 
     @Autowired
 //    @Qualifier("mongoMetricsRepository")
-    @Qualifier("mongoMetricsRepository")
+    @Qualifier("inMemoryMetricsRepository")
     private MetricsRepository<MetricEntity> metricStore;
     @Autowired
     private AppManagement appManagement;

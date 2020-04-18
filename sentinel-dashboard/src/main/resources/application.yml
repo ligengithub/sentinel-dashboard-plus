@@ -1,12 +1,12 @@
 spring:
   application:
     name: sentinel-dashboard-plus
-#  data:
-#    mongodb:
-#      port: 27017
-#      database: db1
-#      uri: mongodb://lg:123456@xx.xx.xx.xx
-#      authentication-database: admin
+  data:
+    mongodb:
+      port: 27017
+      database: db1
+      uri: mongodb://lg:123456@xx.xx.xx.xx
+      authentication-database: admin
   http:
     encoding:
       charset: utf-8

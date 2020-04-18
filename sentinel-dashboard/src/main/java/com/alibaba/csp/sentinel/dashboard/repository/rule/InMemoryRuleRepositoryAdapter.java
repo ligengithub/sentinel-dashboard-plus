@@ -56,6 +56,7 @@ public abstract class InMemoryRuleRepositoryAdapter<T extends RuleEntity> implem
             nextId();
             MAX_ID = entity.getId();
         }
+//        System.out.println(MAX_ID);
         T processedEntity = preProcess(entity);
         if (processedEntity != null) {
             allRules.put(processedEntity.getId(), processedEntity);
@@ -88,6 +89,7 @@ public abstract class InMemoryRuleRepositoryAdapter<T extends RuleEntity> implem
         for (T rule : rules) {
             savedRules.add(save(rule));
         }
+        System.out.println("--MAXNUM"+MAX_ID);
         return savedRules;
     }
 

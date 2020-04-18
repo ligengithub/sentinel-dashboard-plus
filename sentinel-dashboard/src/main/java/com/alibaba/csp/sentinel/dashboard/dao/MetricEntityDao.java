@@ -20,17 +20,17 @@ import java.util.List;
 @Component
 public class MetricEntityDao {
 
-    @Autowired
-    private MongoTemplate mongoTemplate;
+//    @Autowired
+//    private MongoTemplate mongoTemplate;
 
     public void save(MetricEntity metric) {
-        mongoTemplate.insert(metric);
+//        mongoTemplate.insert(metric);
     }
-
-    public void savaAll(List<MetricEntity> metricEntities) {
-        metricEntities.forEach(m -> mongoTemplate.save(m));
-    }
-
+//
+//    public void savaAll(List<MetricEntity> metricEntities) {
+//        metricEntities.forEach(m -> mongoTemplate.save(m));
+//    }
+//
     public List<MetricEntity> queryByAppAndResourceBetween(String app, String resource,
                                                            long startTime, long endTime) {
         Criteria criteria = new Criteria();
@@ -39,7 +39,8 @@ public class MetricEntityDao {
                 .and("timestamp").gt(new Date( startTime)).lt(new Date(endTime));
         Query query = new Query(criteria);
 
-        return mongoTemplate.find(query, MetricEntity.class);
+//        return mongoTemplate.find(query, MetricEntity.class);
+        return null;
     }
 
 }

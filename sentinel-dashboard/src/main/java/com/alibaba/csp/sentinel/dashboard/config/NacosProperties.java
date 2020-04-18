@@ -32,11 +32,15 @@ public class NacosProperties {
 
     private String groupId = "DEFAULT_GROUP";
 
-    private String flowDataIdPrefix = "-flow-rules";
+    private String flowDataIdPrefix = "flow-rules";
 
-    private String degradeDataIdPrefix = "-degrade-rules";
+    private String degradeDataIdPrefix = "degrade-rules";
 
-    private String paramFlowDataIdPrefix = "-param-rules";
+    private String paramFlowDataIdPrefix = "param-rules";
+
+    private String gatewayFlowRuleDataIdPrefix = "gateway-flow-rules";
+
+    private String gatewayApiDefineDataIdPrefix = "gateway-api-define-rules";
 
     public String getServerAddr() {
         return serverAddr;
@@ -86,9 +90,23 @@ public class NacosProperties {
         this.paramFlowDataIdPrefix = paramFlowDataIdPrefix;
     }
 
+    public String getGatewayFlowRuleDataIdPrefix() {
+        return gatewayFlowRuleDataIdPrefix;
+    }
 
+    public void setGatewayFlowRuleDataIdPrefix(String gatewayFlowRuleDataIdPrefix) {
+        this.gatewayFlowRuleDataIdPrefix = gatewayFlowRuleDataIdPrefix;
+    }
 
-//    public static final String CLUSTER_MAP_DATA_ID_POSTFIX = "-cluster-map";
+    public String getGatewayApiDefineDataIdPrefix() {
+        return gatewayApiDefineDataIdPrefix;
+    }
+
+    public void setGatewayApiDefineDataIdPrefix(String gatewayApiDefineDataIdPrefix) {
+        this.gatewayApiDefineDataIdPrefix = gatewayApiDefineDataIdPrefix;
+    }
+
+    //    public static final String CLUSTER_MAP_DATA_ID_POSTFIX = "-cluster-map";
 //
 //    /**
 //     * cc for `cluster-client`
